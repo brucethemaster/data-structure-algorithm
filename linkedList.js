@@ -53,6 +53,18 @@ class LinkedList {
     this.length--;
   }
 
+  getIndex(value) {
+    let currentNode = this.head;
+    let i = 0;
+    while (currentNode.value != value) {
+      currentNode = currentNode.next;
+      i++;
+      if (currentNode === null) {
+        return -1;
+      }
+    }
+    return i;
+  }
   printList() {
     const arra = [];
     let currentNode = this.head;
@@ -96,3 +108,4 @@ console.log(myLinkedList.printList());
 myLinkedList.reverse();
 
 console.log(myLinkedList.printList());
+console.log('92', myLinkedList.getIndex(99));
