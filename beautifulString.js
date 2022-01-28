@@ -6,7 +6,8 @@ function isBeautifulString(inputString) {
   }
 
   let map = alphabet.reduce(
-    (acc, e) => acc.set(e, inputString.match(e) === null ? 0 : inputString.match(e).length),
+    (acc, e) =>
+      acc.set(e, inputString.match(new RegExp(e, 'g')) === null ? 0 : inputString.match(new RegExp(e, 'g')).length),
     new Map()
   );
 
