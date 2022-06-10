@@ -106,8 +106,7 @@ BinaryHeap.prototype = {
       if (child2N < length) {
         var child2 = this.content[child2N],
           child2Score = this.scoreFunction(child2);
-        if (child2Score < (swap == null ? elemScore : child1Score))
-          swap = child2N;
+        if (child2Score < (swap == null ? elemScore : child1Score)) swap = child2N;
       }
 
       // No need to swap further, we are done.

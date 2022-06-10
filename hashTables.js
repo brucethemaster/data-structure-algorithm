@@ -23,9 +23,7 @@ class HashTable {
 
     const currentBucket = this.data[address];
     if (currentBucket.legnth) {
-      return currentBucket
-        .filter(item => item[0] === key)
-        .reduce((a, c) => c[2])[1];
+      return currentBucket.filter(item => item[0] === key).reduce((a, c) => c[2])[1];
     }
     return undefined;
   }
@@ -54,6 +52,6 @@ myHasTable.set('grapes2', 10002);
 myHasTable.set('apple', 10003);
 myHasTable.set('pear', 10004);
 myHasTable.get('pear');
-console.log(JSON.stringify(myHasTable));
+console.log(JSON.stringify(myHasTable, null, 2));
 console.log(myHasTable.get('pear2'));
 console.log(' keys() ', myHasTable.keys());
